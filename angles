@@ -1,0 +1,47 @@
+	public double getAngleRadians(Vector2D v) {
+		return Math.acos(this.getDotProduct(v) / (this.getMagnitude() * v.getMagnitude()));
+	}
+
+	public static double getAngleRadians(Vector2D v, Vector2D u) {
+		return Math.acos(getDotProduct(v, u) / (getMagnitude(v) * getMagnitude(u)));
+	}
+
+	public double getAngleDegrees(Vector2D v) {
+		return (this.getAngleRadians(v) * 180) / Math.PI;
+	}
+
+	public static double getAngleDegrees(Vector2D v, Vector2D u) {
+		return (getAngleRadians(v, u) * 180) / Math.PI;
+	}
+
+	public double getAngleWithXRadians() {
+		return this.getAngleRadians(i);
+	}
+
+	public static double getAngleWithXRadians(Vector2D v) {
+		return getAngleRadians(v, i);
+	}
+
+	public double getAngleWithXDegrees() {
+		return this.getAngleDegrees(i);
+	}
+
+	public static double getAngleWithXDegrees(Vector2D v) {
+		return getAngleDegrees(v, i);
+	}
+
+	public double getAngleWithYRadians() {
+		return this.getAngleRadians(j);
+	}
+
+	public static double getAngleWithYRadians(Vector2D v) {
+		return getAngleRadians(v, j);
+	}
+
+	public double getAngleWithYDegrees() {
+		return this.getAngleDegrees(j);
+	}
+
+	public static double getAngleWithYDegrees(Vector2D v) {
+		return getAngleDegrees(v, j);
+	}
